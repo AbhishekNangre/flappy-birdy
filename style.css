@@ -4,12 +4,19 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #181818;
+
+    /* 🔥 background image instead of solid color */
+    background: url("blue-sky-background-pixel-art-style_475147-2665.avif") no-repeat center center fixed;
+    background-size: cover;
+
     font-family: 'Arial', sans-serif;
     color: #fff;
     flex-direction: column;
     text-align: center;
 }
+
+
+
 
 h1 {
     font-size: 36px;
@@ -21,7 +28,9 @@ h1 {
 #gameCanvas {
     border: 2px solid #444;
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
-    background-color: #222;
+
+    /* 🔥 make canvas transparent so bg shows */
+    background-color: transparent;
 }
 
 .rules-box {

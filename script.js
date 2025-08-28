@@ -20,6 +20,29 @@ let score = 0;
 let highScore = localStorage.getItem("highScore") || 0;
 let gameOver = false;
 
+
+
+// Load background image
+const bgImg = new Image();
+bgImg.src = "blue-sky-background-pixel-art-style_475147-2665.avif";
+let bgX = 0;
+let bgSpeed = 1.5; // adjust for faster/slower scrolling
+
+
+function drawBackground() {
+    // draw two images side by side for looping
+    ctx.drawImage(bgImg, bgX, 0, canvas.width, canvas.height);
+    ctx.drawImage(bgImg, bgX + canvas.width, 0, canvas.width, canvas.height);
+
+    // move background
+    bgX -= bgSpeed;
+
+    // reset when first image fully off screen
+    if (bgX <= -canvas.width) {
+        bgX = 0;
+    }
+}
+
 function drawBird() {
     ctx.fillStyle = "yellow";
     ctx.fillRect(bird.x, bird.y, bird.width, bird.height);
@@ -104,6 +127,8 @@ function resetGame() {
 
 function gameLoop() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+    drawBackground(); // draw moving background
+
     drawBird();
     updateBird();
     drawPipes();
