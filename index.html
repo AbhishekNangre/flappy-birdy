@@ -1,26 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flappy Bird Game</title>
     <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    
-    <h1>Flappy Bird Game</h1>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 
-    <div class="rules-box">
-        <h2>Game Rules</h2>
-        <ul>
-            <li>Click or press Space/Arrow Up to make the bird jump.</li>
-            <li>Avoid hitting the pipes!</li>
-            <li>Score by passing through the pipes.</li>
-        </ul>
+</head>
+
+<body>
+
+    <!-- Start Screen -->
+    <div id="start-screen">
+        <h1>Flappy Bird Game</h1>
+        <p class="funny-text">🐤 A bird that refuses to get a pilot license!</p>
+        <div class="rules-box">
+            <h2>Game Rules</h2>
+            <ul>
+                <li>Click or press Space/Arrow Up to make the bird jump.</li>
+                <li>Avoid hitting the pipes!</li>
+                <li>Score by passing through the pipes.</li>
+            </ul>
+        </div>
+        <button id="play-button">Play</button>
     </div>
 
-    <canvas id="gameCanvas" width="320" height="480"></canvas>
+    <!-- Game Canvas (hidden at first) -->
+    <canvas id="gameCanvas" width="800" height="350" style="display: none;"></canvas>
 
+    <!-- Game Over Screen -->
     <div class="game-over" style="display: none;">
         <p>Game Over! Highest Score: <span id="final-score"></span></p>
         <button onclick="resetGame()">Play Again</button>
@@ -28,4 +38,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
