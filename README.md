@@ -11,7 +11,8 @@ The rules are simple: keep the bird flying, avoid the pipes, and don’t rage qu
 ## 🎮 Demo  
 👉 [Play Flappy Birdy Here](https://abhisheknangre.github.io/flappy-birdy)  
 
-[![Click on this to play](assets/ezgif.com-video-to-gif-converter.gif)](https://abhisheknangre.github.io/flappy-birdy)
+[![Click on this to play](./assets/ezgif-com-video-to-gif-converter.gif)](https://abhisheknangre.github.io/flappy-birdy)
+
 
 
 ---
