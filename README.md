@@ -29,7 +29,7 @@ The rules are simple: keep the bird flying, avoid the pipes, and don’t rage qu
 - Doesnt work on mobile web yet
 
 
-## To do
+## upcoming features
 - Add sound effects
 - Add leaderboard
- 
+- More levels
